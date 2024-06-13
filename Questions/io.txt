@@ -1,0 +1,77 @@
+                                                                             I/O Assignment
+                                                                             ==============
+
+
+1.
+A stream can be defined as a sequence of data. The InputStream is used to read data from a source and
+the OutputStream is used for writing data to a destination.
+
+2.
+write() - writes the specified byte to the output stream
+write(byte[] array) - writes the bytes from the specified array to the output stream
+flush() - forces to write all data present in the output stream to the destination
+close() - closes the output stream
+
+
+
+3.
+Serialization is the process of converting an object into a stream of bytes to transfer it over a network or to
+store it in a file or database. In Java, serialization is done by implementing the Serializable interface.
+
+
+4. 
+The Serializable interface in Java is a marker interface that has no methods. It is used to mark classes that
+can be serialized, meaning their object instances can be converted into a stream of bytes.
+
+
+5. 
+Deserialization is the process of converting a stream of bytes back into an object instance. This is done
+after an object has been serialized.
+
+
+6. 
+Serialization is achieved in Java by implementing the Serializable interface. When an object is serialized, its
+state is converted into a stream of bytes, which can then be transferred over a network or stored in a file or
+database.
+
+
+
+7. 
+Deserialization is achieved in Java by reading a stream of bytes and using them to recreate the original
+object instance. This is done by calling the readMbject() method of an ObjectInputStream instance.
+
+
+8.
+Mark member variables as static or transient, and those member variables will no more be a part of
+Serialization.
+
+
+9. 
+The following classes are available in the Java IM API and are important to work with files in Java
+File
+RandomAccessFile
+FileInputStream
+FileReader
+FileMutputStream
+FileWriter
+
+
+
+10.
+Serializable-	                                                            
+============        
+*A serializable interface is used to implement serialization. 
+*Serializable is a marker interface i.e. it does not contain any method.
+*Serializable interface passes the responsibility of serialization to JVM and the programmer has no control over serialization, and it is a default algorithm.
+*Serialization using a serializable interface has bad performance.
+
+Externalizable-  
+==============
+*An externalizable interface used to implement Externalization.
+*The externalizable interface is not a marker interface and thus it defines two methods writeExternal() and readExternal().
+*The externalizable interface provides all serialization responsibilities to a programmer and hence JVM has no control over serialization.  
+*Serialization using an externalizable interface has better performance.
+
+
+
+*********************************************************************************END***********************************************************************************

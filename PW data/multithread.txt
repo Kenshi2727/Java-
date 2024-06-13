@@ -1,0 +1,188 @@
+                                                    MULTITHREADING ASSIGNMENT
+                                                    =========================
+
+1) Multithreading is a programming concept in which a program or a process is divided into two or more subprograms or threads that are
+   executed at the same time in parallel.For example,one subprogram can display an animation on the screen while the another may build
+   the next animation to be displayed.A program that contains multiple flows of control is known as multithreaded program.
+
+   It is a very important program feature in java as it allows the prgrammer to utilize the resources in the best possible manner therby  
+    saving the CPU time.It is very useful for IO bound-processes since each thread can run the IO-bound process concurrently.
+ 
+
+
+
+
+
+2) It is useful in a number of ways-
+   *It enables programmers to do multpile things at one time.They can divide a long program(containing operations that are conceptually
+    concurrent) into threads and execute them in parallel.
+   *It helps us to improve thruput.
+   *Superior application responsiveness.
+   *Minimized system resource usage.
+   *It helps in developing efficient programs.
+   *Better utilization of CPU memory.
+   *It is cost effective in case of context switching.
+   *It can be used to simplify the program structure.
+   *Thread synchronization functions can be used to provide enhanced process-to-process communication. 
+
+
+
+
+
+
+
+3) A thread in java is a very light-weighted  process, or we can say the smallest part of the process that allows a program to operate
+   more efficiently by running multiple tasks simultaneously.
+
+
+
+
+
+
+
+4) A new thread can be created in two ways:
+  (1)By creating a thread class: Define a class that extends Thread class and override its run() method with the code required by the 
+     ==========================  thread.
+
+                                 class MyThread extends Thread
+                                 { 
+                                  ............................
+                                  ............................
+                                  ............................  
+                                 }
+                        
+                                 Now we have a new type of thread 'MyThread'.The run() method has been inherited by the class MyThread. 
+                                 We have to override this method in order to implement the code to be executed.
+                                 
+                                 public void run()
+                                 { 
+                                  ............................
+                                  ............................    //Thread code here
+                                  ............................  
+                                 }
+ 
+  (2)By converting a class to a thread: Define a class that implements Runnable interface.The Runnable interface has only one method,
+     =================================  run(),that is to be defined in the method with the code to be executed by the thread.
+        
+                                        class Mythread implements Runnable
+                                        {
+                                         .................................
+                                         .................................
+                                         .................................
+                                        }
+                                          
+                                        This is more recommended as you can extend to a class as well  while in earlier case,you cannot
+                                        extend to a new class as JAVA DOES NOT SUPPORT MULTIPLE INHERITANCE!
+
+
+
+
+
+
+
+
+
+
+
+
+
+5)                      Thread                                   |                            Process
+                        ======                                   |                            =======
+                                                                 |
+*Thread means a segment of a process.                            |*Process means any program is in execution.
+                                                                 | 
+*The thread takes less time to terminate.                        |*The process takes more time to terminate.
+                                                                 |                                                                 
+*It takes less time for creation.                                |*It takes more time for creation. 
+                                                                 |
+*It takes less time for context switching.                       |*It also takes more time for context switching.
+                                                                 |
+*Thread is more efficient in terms of communication.             |*The process is less efficient in terms of communication.
+                                                                 | 
+*Threads share memory.                                           |*The process is isolated.
+                                                                 |
+*A Thread is lightweight as each thread in a process shares      |*The process is called the heavyweight process.
+ code, data, and resources.                                      |
+                                                                 |
+*Thread switching does not require calling an operating system   |*Process switching uses an interface in an operating system.
+ and causes an interrupt to the kernel.                          | 
+                                                                 |
+*Threads share data with each other.                             |*The process does not share data with each other.
+                                                                 |
+*No system call is involved, it is created using APIs.           |*A system call is involved in it.
+
+
+
+
+
+
+
+
+
+6)Daemon threads can be created by using the method <threadObjectName>.setDaemon(true).
+  
+  "void setDaemon(boolean status)" method marks the current thread as a daemon thread or user thread. For example, if I have a user
+  thread tU then tU.setDaemon(true) would make it a Daemon thread. On the other hand, if I have a Daemon thread tD then calling
+  tD.setDaemon(false) would make it a user thread. 
+
+
+
+
+
+7)sleep(): This Method is used to pause the execution of current thread for a specified time in Milliseconds. Here, Thread does not
+  =======  lose its ownership of the monitor and resume’s it’s execution
+
+
+ Example-
+ -------        
+
+
+
+           synchronized(resource1)
+{
+Thread.sleep(1000);  Here Lock Is Held By The Current Thread
+//after 1000 milliseconds, current thread will wake up, or after we call that is interrupt() method
+}
+
+
+
+
+ wait(): This method is defined in object class. It tells the calling thread (a.k.a Current Thread) to wait until another thread 
+ ======  invoke’s the notify() or notifyAll() method for this object, The thread waits until it reobtains the ownership of the monitor 
+         and resume’s execution.
+
+
+
+ Example-
+ -------  
+
+
+
+synchronized(resource1)
+{
+resource1.wait()  Here Lock Is Released By Current Thread 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

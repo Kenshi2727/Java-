@@ -1,0 +1,76 @@
+                           Assisgnment 10 Feb(Constructor)
+                           ===============================
+
+1) Object creation is not enough,compulsorily we should perform initialization then only the object is in a
+   position to provide thye response properly.
+   Whenever we are creating an object, some piece of code will be executed automatically to perform 
+   initialization of an object.This piece of code is nothing but a constructor.
+
+2) Constructor chaining is the process of calling one constructor from another constructor with respect to 
+   current object. 
+   One of the main use of constructor chaining is to avoid duplicate codes while having multiple constructor
+   (by means of constructor overloading) and make code more readable.
+
+3) No, we cannot call subclass constructor from superclass constructor.
+
+4) If we add a return type to a constructor, then it will become a method of the class.But we use constructor
+   for initialization of object.
+
+5) A constructor that does not accept any arguments is known as No-arg constructor.
+
+6) The main dufference between thgem is that-
+   If you have not made a constructor,then behind the scene Java automatically adds a constructor during 
+   runtime known as DEFAULT CONSTRUCTOR.
+    
+                                  WHEREAS
+   A constructor that does not accept any arguments is known as No-arg constructor AND IS NOT ADDED
+   AUTOMATICALLY BY JAVA if you have not made any constructor.
+
+7) *The constructor overloading enables the accomplishment of static polymorphism.
+   *Sometimes there is a need of initializing an object in different ways. This can be done using 
+    constructor overloading. 
+   *The class instances can be initialized in several ways with the use of constructor overloading.
+   *It facilitates the process of defining multiple constructors in a class with unique signatures. 
+    Each overloaded constructor performs various tasks for specified purposes.
+
+8) If you have not made a constructor,then behind the scene Java automatically adds a constructor during 
+   runtime known as DEFAULT CONSTRUCTOR.
+   It is a zero-parameterised constructor.So, whenever you create an object and if there is a call to a 
+   constructor which is zero-parameterized constructor and if there is no constructor included in program 
+   ,then at that time by default behind the scene, a DEFAULT CONSTRUCTOR is included(which is zero -
+                                                                                          parameterised).
+
+    Example-
+    ======= 
+
+    public class Student {
+  String firstName;
+  String lastName;
+  int age;
+  
+  public static void main(String args[]) {
+      Student myStudent = new Student();
+      
+      myStudent.firstName = "Ihechikara";
+      myStudent.lastName = "Abba";
+      myStudent.age = 100;
+      
+      System.out.println(myStudent.age);
+      //100
+      
+      System.out.println(myStudent.firstName);
+      //Ihechikara
+  }
+}  
+
+Notice that we did not define any constructor before creating  myStudent to initialize the attributes created
+in the class.This will not throw an error our way. Rather, the compiler will create an empty constructor but 
+you will not see this constructor anywhere in the code – this happens under the hood.
+  
+
+*****************************************************END*****************************************************
+
+
+
+
+   

@@ -1,0 +1,149 @@
+                                                       STRING ASSIGNMENT
+                                                       =================
+
+1)A string whose content can be changed without creating a new object is known as MUTABLE STRING in java. StringBuilder and StringBuffer 
+can be used to create a mutable string. 
+ 
+  eg.-  String brand="pwskill";
+        System.out.println(brand);
+        brand.concat("Bengaluru");        //adding another string
+        System.out.println(brand);
+
+        StringBuilder brand1=new StringBuilder("pwskill");
+        System.out.println(brand1);
+        brand1.append("Bengaluru");        //adding another string
+        System.out.println(brand1);
+
+  Output-
+  ======
+         pwskill
+         pwskill              //String not changed!
+         pwskill
+         pwskillBengaluru     //String changed!
+
+
+
+
+
+
+2) //WAP to reverse a string
+
+import java.util.Scanner;
+public class reverse
+{
+public static void main(String args[])
+{
+Scanner scan=new Scanner(System.in);
+String str;
+System.out.println("Enter a string:");     
+str=scan.next();
+String s="";
+int i,l=str.length();
+for(i=0;i<l;i++)
+s=str.charAt(i)+s;                         
+System.out.println("Input:"+str);
+System.out.println("Output:"+s);
+}
+}
+
+OUTPUT-
+======
+Enter a string:
+PWSKILLS
+Input:PWSKILLS
+Output:SLLIKSWP
+
+Enter a string:
+ALAKHSIR
+Input:ALAKHSIR
+Output:RISHKALA
+PS E:\New World>
+
+
+
+
+
+3)//WAP to reverse a sentence while preserving the position
+
+import java.util.Scanner;
+public class preservance
+{
+public static void main(String args[])
+{
+Scanner scan=new Scanner(System.in);
+String str;
+System.out.println("Enter a string:");
+str=scan.nextLine();
+String s="";
+String sarr[]=str.split(" ");
+int i;
+for(String elem:sarr)
+{
+for(i=elem.length()-1;i>=0;i--)
+{
+s=s+elem.charAt(i);
+}
+s=s+" ";
+}
+System.out.println("Input:"+str);
+System.out.println("Output:"+s);
+}
+}
+
+OUTPUT-
+======
+Enter a string:
+Think Twice
+Input:Think Twice
+Output:knihT eciwT
+PS E:\New World>
+Enter a string:
+thank you for checking my assignment
+Input:thank you for checking my assignment
+Output:knaht uoy rof gnikcehc ym tnemngissa
+PS E:\New World>
+
+
+
+
+
+
+4)//WAP to sort a string alphabetically
+
+import java.util.Scanner;
+public class alpha
+{
+public static void main(String args[])
+{
+Scanner scan=new Scanner(System.in);
+String str;
+System.out.println("Enter a string:");
+str=scan.next();
+String s="";
+int i,j;
+char ch;
+for(i=65;i<=90;i++)
+{
+for(j=0;j<str.length();j++)
+{
+ch=str.charAt(j);
+if(ch==i || ch==i+32)
+s=s+ch;
+}
+}
+System.out.println("Original String:"+str);
+System.out.println("Converted String:"+s);
+}
+}
+
+OUTPUT-
+======
+Enter a string:
+bbccdefbbaa
+Original String:bbccdefbbaa
+Converted String:aabbbbccdef
+
+*********************************************************************END******************************************************************
+
+
+

@@ -1,0 +1,175 @@
+                                               COLLECTION FRAMEWORK ASSIGNMENT
+                                               ===============================
+
+
+1)The collections framework which is contained in the java.util package is one of Java's most powerful subsystems.The collection 
+  framework defines a set of interfaces and their implementations to manipulate collections,which serve as a container for a group of 
+  objects such as a set of words in a dictionary or a collection of mails.
+  
+  It can store homogenous and heterogenous data.
+  Dynamic in size.
+  Released in 1.2v of JAVA and all the data will be stored as objects.
+  Collection is basically a set of interfaces and classes which store the data and add,delete,retrieve and manipulate the data/info 
+  easily.
+
+
+
+
+
+
+
+2)ArrayLst-
+  ========
+  *It implements List interface.
+  *It uses a dynamic array to store the duplicate element of different data types.
+  *Manipulation is slow compared to LinkedList.
+  *There is no concept of nodes.
+  * ArrayList is better for storing and accessing data.
+  *Inefficient memory utilization.
+  *Insertion operation is slow.
+  *It can be one, two or multi-dimensional.
+
+  LinkedList-
+  ==========
+  *It implements both List and Deque interfaces.
+  *It follows a specific data structure known as Doubly linked data structures.
+  *Manipulation is fast because no shifting is required unlike ArrayList.
+  *LinkedList has concept of nodes that are linked to each other. 
+  *LinkedList is better for manipulating data.
+  *Better memory utilization.
+  *Insertion operation is fast.
+  *It can either be single, double or circular LinkedList.
+
+
+
+
+
+
+
+
+
+3)Iterator-
+  ========
+ *Can traverse elements present in Collection only in the forward direction.
+ *Helps to traverse Map, List and Set.
+ *Indexes cannot be obtained by using Iterator.
+ *Cannot modify or replace elements present in Collection
+ *Cannot add elements and it throws ConcurrentModificationException.
+ *Certain methods of Iterator are next(), remove() and hasNext().
+ 
+
+  ListIterator-
+  ============
+ *Can traverse elements present in Collection both in forward and backward directions.
+ *Can only traverse List and not the other two.
+ *It has methods like nextIndex() and previousIndex() to obtain indexes of elements at any time while traversing List.
+ *We can modify or replace elements in collection.
+ *Can easily add elements to a collection at any time.
+ *Certain methods of ListIterator are next(), previous(), hasNext(), hasPrevious(), add(E e).
+
+
+
+
+
+
+
+
+4)Iterator-
+  ========
+ *Iterator is a universal cursor as it is applicable for all the collection classes.
+ *Iterator has the remove() method.	
+ *Iterator can do modifications (e.g using remove() method it removes the element from the Collection during traversal).
+ *Iterator is not a legacy interface. Iterator can be used for the traversal of HashMap, LinkedList, ArrayList, HashSet,
+  TreeMap, TreeSet .
+
+
+  Enumeration-
+  ===========
+ *Enumeration is not a universal cursor as it applies only to legacy classes.
+ *Enumeration does not have the remove() method.
+ *Enumeration interface acts as a read only interface, one can not do any modifications to Collection while traversing
+  the elements of the Collection.
+ *Enumeration is a legacy interface which is used for traversing Vector, Hashtable.
+
+
+
+
+
+
+
+
+
+
+5)List-
+  ====
+ *The List is an indexed sequence.
+ *List allows duplicate elements
+ *Elements by their position can be accessed.
+ *Multiple null elements can be stored.
+ *List implementations are ArrayList, LinkedList, Vector, Stack
+  
+
+
+  Set-
+  ===
+ *The Set is an non-indexed sequence.
+ *Set doesn’t allow duplicate elements.
+ *Position access to elements is not allowed.
+ *Null element can store only once.
+ *Set implementations are HashSet, LinkedHashSet.
+
+
+
+
+
+
+
+
+6)HashSet-
+ ========
+ *It implements Set interface.
+ *It follows HashTable(Hashing).
+ *HashSet allows a null object.
+ *Hash set use equals method to compare two objects.  
+
+ 
+ TreeSet-
+ =======
+ *It implements SortedSet interface which extends to Set interface.
+ *It internally follows Binary Search Tree. 
+ *The tree set does not allow the null object. It throws the null pointer exception. 
+ *Tree set use compare method for comparing two objects. 
+
+
+
+
+
+
+
+7)Array-
+  =====
+  *It can be single-dimensional or multidimensional. 
+  *for and for each generally is used for iterating over arrays. 
+  *length keyword can give the total size of the array.
+  *It is static and of fixed length.
+  *It is faster as it is of fixed size.
+  *Primitive data types can be stored directly unlikely objects.
+  *Generics can not be added here hence type unsafe. 
+  *Assignment operator only serves the purpose.
+
+
+  ArrayList-
+  =========
+  *It can only be single-dimensional. 
+  *Here iterator is used to traverse the ArrayList 
+  *size() method is used to compute the size of ArrayList.
+  *It is dynamic and can be increased or decreased in size when required. 
+  *It is relatively slower because of its dynamic nature. 
+  *Primitive data types are not directly added unlikely arrays, they are added indirectly with help of autoboxing and unboxing
+  *Generics can be added here hence making ArrayList type-safe. 
+  *Here a special method is used known as add() method.
+
+
+
+
+***********************************************************END***************************************************************************  

@@ -1,0 +1,147 @@
+                                                      ENCAPSULATION ASSIGNMENT
+                                                      ========================
+
+1)Binding of data and corresponding methods into a single unit is called Encapsulation.If any java class follows data hiding and 
+  abstraction then such class is referred to as "Encapsulated class".
+
+                                  Encapsulation=Data hiding + Data Abstraction
+  
+  In encapsulation, the variables of a class will be hidden from other classes,
+  and can be accessed only through the methods of their current class. Therefore, it is also known as data hiding.
+
+
+2)Important features of encapsulation are:
+ *it helps in data hiding.
+ *More flexibilty:Enables user to set variables as read or write only.
+ *Using encapsulation,it's easy to change and adapt to new requirements.
+ *Encapsulation makes it possible for objects to be treated like like 'black boxes',each performing a specific task without any 
+  concern for internal implementation.
+
+3)Setter methods- Setter methods are used to set the value to the instance variable of the class.
+  ==============   
+  Getter methods- Getter methods are used to get the value from the instance variables of the class.
+  ==============
+  
+  Example-  private int age;
+  =======   private String name;         
+            public void setAge(int age)     //setter method to set the value of age
+            {
+             this.age=age;
+            }
+            public int getAge()             //getter method to return the value of age
+            {
+             return age;
+            }
+            public void setName(String name)     //setter method to set the value of name
+            {
+             this.name=name;
+            }
+            public String getName()              //getter method to return the value of name
+            {
+             return name;
+            }
+
+4)If both local variable and instance variable have the same name inside the method then it would result in a name clash and JVM will
+  always give preference for LOCAL VARIABLE.This approach is called Shadowing Problem.
+  This is solved by by using 'this' keyword which points the variable to the current object.
+  The this keyword represents an object that calls/invokes the member of class.It stores the address of the object used for invoking 
+  a memeber of class.
+
+  Example-  class Student
+  =======   {   
+            private int age;
+            private String name;         
+            public void setAge(int age)     
+            {
+             this.age=age;                  //points to the current object     
+            }
+            public int getAge()             
+            {
+             return age;
+            }
+            public void setName(String name)     
+            {
+             this.name=name;               //points to the current object
+            }
+            public String getName()              
+            {
+             return name;
+            }  
+            }
+            
+            public class Demo 
+            {
+            public static void main(String args[])
+            {
+             Student obj=new Student();
+                obj.setAge(1800); 
+                obj.getAge();
+                obj.setName("Tarzen");
+                obj.getName();
+            }
+            }
+         
+     Here we can see that compiler is in a name conflict when control reaches setAge() and setName() methods hence this keyword
+     helps us to solve this problem by pointing the variable to current object.Now,instaed of returnining default values(0 and null) 
+     of local variables,now it will now return 1800 and "Tarzen" respectively.
+
+5) Advantages of encapsulation-
+   *it helps in data hiding,i.e,privacy.
+   *it provides better security to our code.
+   *encapsulated code is simple to debug and easy to test for unit testing.
+   *It enables you to easily change the methods, reuse the code, and execute new requirements in your program.
+   *The encapsulated code is cleaner, flexible, and easy to change .
+
+6) There are two important ways through which you can achieve or implement encapsulation in the Java programming language-
+   *By setting the instance variable of the class as private, so that it cannot be used directly by anyone from outside the class.
+   example-
+   =======
+           public class TestEncapsulation {
+   private String privateVar;
+   TestEncapsulation() {
+      privateVar = "java";
+   }
+}
+public class PrivateVariables {
+   public static void main(String[] args) {
+      System.out.println(TestEncapsulation.privateVar);
+   }
+}  
+
+
+From the above example of the private access specifier, you can notice the class cannot use the variable from the previous class.
+
+*Set and get the values of variable/fields in the class using public setter and getter methods.
+example-
+=======
+        
+class TestEncapsulation {
+   private String privateVar;
+   TestEncapsulation() {
+      privateVar = "java"; 
+   }
+
+   public void getVariable() {
+      System.out.println(privateVar);
+   }
+   public void setVariable(String setvalue) {
+      privateVar = setvalue;
+   }
+}
+public class PrivateVariables {
+   public static void main(String[] args) {
+      TestEncapsulation test = new TestEncapsulation();
+      test.setVariable("trax");
+      test.getVariable();
+   //System.out.println(TestEncapsulation.privateVar);
+   }
+} 
+  
+OUTPUT-
+======   trax
+
+
+So,these are the methods by which encapsulation is achieved.
+
+
+**************************************************************END************************************************************************ 
